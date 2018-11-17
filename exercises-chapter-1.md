@@ -4,39 +4,39 @@ the order in which it is presented.
 
 `10`
 
-*Answer*:Prints 10.
+~Answer~: Prints 10.
 
 `(+ 5 3 4)`
 
-*Answer*: Adds all values and prints sum (12) to the screen.
+~Answer~: Adds all values and prints sum (12) to the screen.
 
 `(- 9 1)`
 
-*Answer*: Subtracts 1 from 9 and prints remainder (8) to the screen.
+~Answer~: Subtracts 1 from 9 and prints remainder (8) to the screen.
 
 `(/ 6 2)`
 
-*Answer*: Divides 6 by 2 and prints result (3) to the screen.
+~Answer~: Divides 6 by 2 and prints result (3) to the screen.
 
 `(+ (* 2 4) (- 4 6))`
 
-*Answer*: Multiplies 2 and 4 (8), subtracts 6 from 4 (-2), and then adds the result of both expressions (6) and prints to the screen.
+~Answer~: Multiplies 2 and 4 (8), subtracts 6 from 4 (-2), and then adds the result of both expressions (6) and prints to the screen.
 
 `(define a 3)`
 
-*Answer*: Associates the value 3 with the symbol a.
+~Answer~: Associates the value 3 with the symbol a.
 
 `(define b (+ a 1))`
 
-*Answer*: Associates the result of the expression a + 1 with the symbol b.
+~Answer~: Associates the result of the expression a + 1 with the symbol b.
 
 `(+ a b (* a b))`
 
-*Answer*: Multiplies a and b, and then adds a b and the product of the previously evaluated expression, printing result to the screen (19).
+~Answer~: Multiplies a and b, and then adds a b and the product of the previously evaluated expression, printing result to the screen (19).
 
 `(= a b)`
 
-*Answer*: Compares a and b to determine if equal, returns false.
+~Answer~: Compares a and b to determine if equal, returns false.
 
 ```
 (if (and (> b a) (< b (* a b)))
@@ -44,7 +44,7 @@ the order in which it is presented.
  a)
 ```
 
-*Answer*: First, multiplies a and b (12) and then determines if b is less than that product (true). Then, determines if b is greater than a (true) and returns true only if
+~Answer~: First, multiplies a and b (12) and then determines if b is less than that product (true). Then, determines if b is greater than a (true) and returns true only if
 both statements (b less than product of a and b; b less than a) are true (true). Returns value of b (4) since both statements are true.
 
 ```
@@ -53,11 +53,11 @@ both statements (b less than product of a and b; b less than a) are true (true).
  (else 25))
 ```
 
-*Answer*: If a is equal to 4 (false), return 6. Else if b is equal to 4 (true), return the sum of 6, 7, and a (16). Else return 25. The conditional statement returns 16.
+~Answer~: If a is equal to 4 (false), return 6. Else if b is equal to 4 (true), return the sum of 6, 7, and a (16). Else return 25. The conditional statement returns 16.
 
 `(+ 2 (if (> b a) b a))`
 
-*Answer*: If b is greater than a (true), return b; else return a. Then, add two to the value returned (6).
+~Answer~: If b is greater than a (true), return b; else return a. Then, add two to the value returned (6).
 
 ```
 (* (cond ((> a b) a)
@@ -66,7 +66,7 @@ both statements (b less than product of a and b; b less than a) are true (true).
  (+ a 1))
 ```
 
-*Answer*: If a is greater than b (false), return a; else if a is less than b (true), return b; else, return -1. Then, add the value of a and 1 (4). Multiply the value returned
+~Answer~: If a is greater than b (false), return a; else if a is less than b (true), return b; else, return -1. Then, add the value of a and 1 (4). Multiply the value returned
 from the conditional (4) by the sum of a and 1 (4). Print result to screen (16).
 
 # Exercise 1.2
@@ -78,7 +78,7 @@ Translate the following expression into prefix form:
 3(6 − 2)(2 − 7)
 ```
 
-*Answer*: Translated to prefix form:
+~Answer~: Translated to prefix form:
 ```
 (/ (+ 5 4 (- 2 3 (+ 6 (/ 5 4))))
  (* 3 (- 6 2)(- 2 7)))
@@ -87,7 +87,7 @@ Translate the following expression into prefix form:
 # Exercise 1.3
 Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers.
 
-*Answer*:
+~Answer~:
 ```
 (define (sum-of-squares-variant a b c)
  (cond ((or (and (> a b)(> b c))(and (> b a)(> a c))) (+ (* a a)(* b b)))
@@ -104,7 +104,7 @@ following procedure:
  ((if (> b 0) + -) a b))
 ```
 
-*Answer*: The function takes two parameters (a and b). If b is greater than 0, the conditional returns the + operator; else, it returns the - operator. The operator returned
+~Answer~: The function takes two parameters (a and b). If b is greater than 0, the conditional returns the + operator; else, it returns the - operator. The operator returned
 then forms the expression to evaluate the a and b values remaining.
 
 # Exercise 1.5
@@ -124,4 +124,4 @@ What behavior will Ben observe with an interpreter that uses applicative-order e
 evaluation? Explain your answer. (Assume that the evaluation rule for the special form if is the same whether the interpreter is using normal or applicative order:
 The predicate expression is evaluated first, and the result determines whether to evaluate the consequent or the alternative expression.)
 
-*Answer*: Applicative-order would result in the procedure p looping continuously, thus never terminating.
+~Answer~: Applicative-order would result in the procedure p looping continuously, thus never terminating.
